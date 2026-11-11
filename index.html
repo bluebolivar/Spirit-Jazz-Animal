@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spirit Jazz Animal</title>
+  <meta name="description" content="Forget your spirit animal. Which jazz musician are you, really?">
+  <meta property="og:title" content="What's your Spirit Jazz Animal?">
+  <meta property="og:description" content="Forget your spirit animal. Which jazz musician are you, really? 13 questions, no wrong notes.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="intro" class="screen">
+      <p class="kicker">A very serious personality test</p>
+      <h1>What's your<br><span>Spirit Jazz</span><br>Animal?</h1>
+      <p class="lede">Forget the wolf, the owl, and whatever your aunt said about dolphins. Thirteen questions decide which jazz musician you actually are. There are no wrong notes. Only wrong answers.</p>
+      <button id="start" class="btn">Count it off</button>
+      <p class="fine">24 possible musicians. Some of them would hate being in a quiz.</p>
+    </section>
+
+    <section id="quiz" class="screen" hidden>
+      <div class="progress"><div id="bar"></div></div>
+      <p id="count" class="kicker"></p>
+      <h2 id="question"></h2>
+      <div id="answers" class="answers"></div>
+      <button id="back" class="link">&larr; Back</button>
+    </section>
+
+    <section id="result" class="screen" hidden>
+      <p class="kicker" id="result-kicker">Your Spirit Jazz Animal is</p>
+      <div id="card" class="card">
+        <div class="card-art"><span id="initials"></span></div>
+        <div class="card-body">
+          <p class="card-title" id="r-title"></p>
+          <h2 id="r-name"></h2>
+          <p class="card-inst" id="r-inst"></p>
+        </div>
+      </div>
+      <p id="r-blurb" class="blurb"></p>
+      <div class="deep">
+        <p class="label">For the jazz heads</p>
+        <p id="r-deep"></p>
+      </div>
+      <p class="listen"><span class="label">Start here:</span> <span id="r-listen"></span></p>
+      <p id="r-runners" class="runners"></p>
+      <div class="actions">
+        <button id="share" class="btn">Share my result</button>
+        <button id="again" class="btn ghost">Take it again</button>
+      </div>
+      <p id="toast" class="toast" hidden>Link copied. Go start an argument.</p>
+    </section>
+  </main>
+  <footer>Made with love and strong opinions. Please don't email about the Coltrane write-up.</footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
