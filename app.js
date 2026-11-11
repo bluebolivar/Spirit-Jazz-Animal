@@ -37,7 +37,7 @@
   function finish() {
     const r = score(answers);
     renderResult(r.musician, r.runnersUp, true);
-    history.replaceState(null, "", `?r=${r.musician.id}`);
+    try { history.replaceState(null, "", `?r=${r.musician.id}`); } catch (e) {}
   }
 
   function initials(m) {
@@ -83,7 +83,7 @@
 
   function start() {
     answers = []; qi = 0;
-    history.replaceState(null, "", location.pathname);
+    try { history.replaceState(null, "", location.pathname); } catch (e) {}
     document.title = "Spirit Jazz Animal";
     show("quiz");
     renderQuestion();
